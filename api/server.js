@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const MONGO_URL =  "mongodb+srv://5ddSgTYCnIufVHSR:5ddSgTYCnIufVHSR@cluster0.6l8ejou.mongodb.net/mytalordb?retryWrites=true&w=majority&appName=Cluster0";
-const Product = require("./models/product.js")
+const Product = require("../models/product.js")
 const app = express();
 const path=require("path");
-const User = require("./models/user.js")
-const Cart = require("./models/cartmodel.js")
+const User = require("../models/user.js")
+const Cart = require("../models/cartmodel.js")
 
 var bodyParser = require('body-parser')
 const session = require('express-session')
@@ -427,9 +427,14 @@ app.post('/signup', async (req, res) => {
 //     return res.status(500).json({ message: 'Internal server error.' });
 //   }
 // });
-app.listen(8080, ()=>{
-    console.log("ha bhai chalu hai")
-})
+
+
+// Your routes here
+app.get("/", (req, res) => {
+  res.send("Welcome to MyTalorZone!");
+});
+
+module.exports = app; // Export the app instead of listening to a port
 
 // const express = require('express');
 // const mongoose = require('mongoose');
