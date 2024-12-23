@@ -1,0 +1,26 @@
+
+<% layout("/layouts/boilerplate")%>
+   
+<div class="card mb-3" style="margin-left: 15%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="<%=product.img %>" class="img-fluid rounded-start mr-1" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body show-card-body">
+        <h3 class="card-title"><%= product.name %></h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text"><b>Prices &nbsp; :&nbsp; <%= product.price%></b></p>
+        <p class="card-text"><b>Ratings &nbsp; :&nbsp; <%= product.rating %></b><br></p>
+        <p class="card-text"><b>Remaining &nbsp; :&nbsp; <%= product.inStockValue %></b></p>
+        <p class="card-text"><b>Sold &nbsp; :&nbsp; <%= product.soldStockValue %></b><br></p>
+        
+        <form action="/cart-addition" method="POST">
+          <input type="hidden" name="productId" value="some-product-id">
+          <button class="btn btn-primary a-btn">Add to Cart</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>

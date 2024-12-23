@@ -1,0 +1,19 @@
+<% layout("/layouts/boilerplate")%>
+<div class="divm row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for(let product of products){ %>
+        
+       <a href="/product/<%=product._id%>">
+        <div class="product-card product-hov">
+            <img src="<%= product.img%>" class="card-img-top" style="height: 19rem; width: 15rem">
+        
+            <div class="card-body">
+                <p class="card-text">
+                    <b><%= product.name %></b><br> 
+                    &#8377;<%= product.price.toLocaleString("en-IN") %>/item%>
+                    <!-- <i class="tax-info"> &nbsp;  +&nbsp;<b>18% GST</b></i> -->
+                </p>
+            </div>
+        </div></a>
+       
+    <% } %>
+</div>

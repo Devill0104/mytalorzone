@@ -1,0 +1,45 @@
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbarm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/get-product"><i class="fa-solid fa-house" style="color: rgb(1, 151, 210);"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-main" id="navbarSupportedContent">
+        <div class="nav-memb">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/trending" class="nav-link">Trendy </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/traditional">Traditional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/western">Western</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-memb">
+          <form class="d-flex" action="/search" method="get"">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+
+        <div class="nav-memb nav-ls">
+            <!-- Check if user is logged in -->
+            <% if (user) { %>
+                <!-- Show Logout and Cart if logged in -->
+                <a href="/logout" class="nav-link nav-item">Logout</a>
+                <a href="/showcart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <% } else { %>
+                <!-- Show Login and SignUp if not logged in -->
+                <a href="/login" class="nav-link nav-item">Login</a>
+                <a href="/signup" class="nav-link nav-item">SignUp</a>
+            <% } %>
+        </div>
+      </div>
+    </div>
+</nav>

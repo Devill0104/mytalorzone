@@ -1,0 +1,155 @@
+/* styling home page */
+
+body{
+   height: 100%;
+}
+
+.product-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    width: 16rem;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+.divm{
+    margin-top: 1rem;
+    padding: 2rem;
+   
+}
+.nav-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.nav-memb{
+    display: flex;
+}
+.nav-ls{
+    gap: 1rem;
+}
+.divm a{
+    text-decoration: none;
+
+}
+footer{
+    width: 100%;
+    margin-top: auto;
+}
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.listing-link{
+    text-decoration: none !important;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: 0!important;
+}
+
+.card-text p{
+    font-weight: bold !important;
+}
+
+.card-text a{
+    text-decoration: none !important;
+}
+
+/* card effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.logdiv{
+    height: 100%;
+}
+.signupdiv{
+    height: 100%;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* styling show page */
+.show-img{
+    height: 10vh;
+}
+
+/* card effect
+.card-img-overlay{
+    opacity: 0;
+} */
+/* .card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+} */
+
+
+.product-details{
+  padding-left: 0;
+}
+
+.navbarm{
+    margin-bottom: 1rem;
+    background-color: #ffbb77;
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    color: blue !important;
+}
+    
+
+
+.f-info-socials 
+ .f-info-brands{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.show-main{
+    display: flex;
+    flex-direction: column;
+}
+.show-product-card{
+   height: 50vh;
+}
+.show-card-body .card-text, .card-title{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.product-hov:hover{
+    box-shadow: 10px 10px 5px rgb(179, 172, 172);
+}
+.nav-link:hover{
+    color: rgb(197, 86, 86);
+    font-weight: 500;
+}
+.a-btn{
+    margin-left: 1rem;
+}
