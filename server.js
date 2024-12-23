@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const MONGO_URL =  "mongodb+srv://5ddSgTYCnIufVHSR:5ddSgTYCnIufVHSR@cluster0.6l8ejou.mongodb.net/mytalordb?retryWrites=true&w=majority&appName=Cluster0";
-const Product = require("../models/product.js")
+const Product = require("./models/product.js")
 const app = express();
 const path=require("path");
-const User = require("../models/user.js")
-const Cart = require("../models/cartmodel.js")
+const User = require("./models/user.js")
+const Cart = require("./models/cartmodel.js")
 
 var bodyParser = require('body-parser')
 const session = require('express-session')
@@ -430,10 +430,9 @@ app.post('/signup', async (req, res) => {
 
 
 // Your routes here
-app.get("/", (req, res) => {
-  res.send("Welcome to MyTalorZone!");
-});
-
+app.listen("8080",()=>{
+  console.log("server is listening")
+})
 module.exports = app; // Export the app instead of listening to a port
 
 // const express = require('express');
